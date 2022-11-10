@@ -4,24 +4,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Appointment Bookie</title>
 </head>
-<body>
-    <div>
-        <div>
-            <div class="container">COntainer 1</div>
-        </div>
-        <div>
-            <div class="container">Container 2</div>
-        </div>
-        <div>
-            <div class="container">Container 3</div>
+<body >
+   
+    
+   
+    <!-- ------------------------- * navbar * ---------------------------- -->
+    <div class="header">
+      <div class="navbar">
+            <img src="images/logo.jpg">
+         <div class="country_select" id="country">
+            <div class="select">
+              
+                <p id="text">Select Your Country</p>
+                <i class="fa-sharp fa-solid fa-chevron-down" id="arrow"></i>
+            </div>
+            <ul class="option_box" id="list">
+                <li class="options" onclick="mycountry('India')">
+                    <i class="fa-sharp fa-solid fa-location-dot" id="moving"></i>
+                    <p>India</p>
+                    
+                </li>
+                <li class="options" onclick="mycountry('Pakistan')" > 
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <p>Pakistan</p>
+                </li>
+                <li class="options" onclick="mycountry('Bangladesh')">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <p>Bangladesh</p>
+                </li>
+                <li class="options" onclick="mycountry('Nepal')">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <p>Nepal</p>
+                </li>
 
+            </ul>
+         </div>
+         <div class="search_box">
+            <input type="text"  class ="serarchclass"id="searchid" placeholder="Find Your bookie">
+            <p><i class="fa-sharp fa-solid fa-magnifying-glass"></i></p>
+         </div>
+         <div class="message">
+            <i class="fa-regular fa-comment"></i>
+         </div>
+         <div class="bell">
+            <i class="fa-regular fa-bell"></i>
+         </div>
+         <div class="mu_logo">
+            <div class="my_img" id="my_img" onclick="myaccount()">
+                <img src="images/peter griffinn.png">
+            </div>
+            <div class="drop-down" id="drop-downid">
+                <div class="name_img"  >
+                <img src="images/peter griffinn.png">
+                <p>Peter Griffin</p>
+                
+                </div>
+                <ul>
+                   <li>
+                      <i class="fa-regular fa-user"></i>
+                      <p>My Account</p>
+                   </li>
+                   <hr>
+                   <li>
+                    <i class="fa-solid fa-calendar"></i>
+                    <p>My Appointments</p>
+                 </li>
+                 <hr>
+                 <li>
+                    <i class="fa-solid fa-question"></i>
+                    <p>Help Desk</p>
+                 </li>
+                 <hr>
+                 <li>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>log Out Out</p>
+                 </li>
+                </ul>
+                
+            </div>
+            
+         </div>
         </div>
-        <div>
-            <div class="container">Container 4</div>
+    </div>
+    
+    <div class="product">
+        <!-- <div class="calender-popup" id="calender">
+        
+            <form action="post">
+                <h1 id="service">XYZ</h1>
+                <label for="name">Name</label>
+                <input type="text" placeholder>
+                <label for="address">Address</label>
+                <input type="text">
+            </form>
+        </div> -->
+            
+        
+            <div class="box" onclick="yourdoctor(event)">
+                <div class="tooltip">
+                    <p>General Physician</p>
+                    <p>Medicine</p>
+                    <p>Dentists</p>
+                    <p>more...</p>
+                </div>
+                <a href="#"></a>
+                <i class="fa-sharp fa-solid fa-user-doctor"></i>
+                <h1 id="doctor">DOCTORS</h1>
+                
+            </div>
+            <div class="box" onclick="yourrepair(event)">
+                <div class="tooltip-1">
+                    <p>General Physician</p>
+                    <p>Medicine</p>
+                    <p>Dentists</p>
+                    <p>more...</p>
+                </div>
+                <a href="#"></a>
+                <i class="fa-sharp fa-solid fa-screwdriver-wrench"></i>
+                <h1 id="repair">REPAIRS</h1>
+                
+            </div>
+            
+            <div class="box">
+              
+                <a href="#"></a>
+                <i class="fa-sharp fa-solid fa-plug"></i>
+                <h1>SERVICES</h1>
+                
+            </div>
+            <div class="box">
+                <a href="#"></a>
+                <i class="fa-solid fa-scissors"></i>
+                <h1>SALOON</h1>
+                
+            </div>
+            <div class="box">
+                <a href="#"></a>
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                <h1>GROCERY</h1>
+                
+            </div>
+        
+    </div>
+    <div class="model" id="model-bg">
+        <div class="bg-model">
+            <div class="face">
+                <i class="fa-sharp fa-solid fa-calendar-days"></i>
+                <div class="cross" onclick="cross_Model()">X</div>
+
+            </div>
+            <br>
+            <form action="post" class="booking-form" onsubmit="submitform()" >
+                <label for="Name">Name</label>
+                <input type="text"><br><br>
+                <label for="Phone Number" value="number ">Phone Number</label>
+                <input type="text"><br><br>
+                <label for="Address">Address</label>
+                <input type="text" id="address"><br><br>
+                <label for="Date">Date</label>
+                <input type="date"><br><br>
+                <label for="Time">Time</label>
+                <input type="time"><br><br>
+                <button class="button">Submit</button>
+                <div class="paraphrases">the expert will confirm and give you a call soon...</div>
+            </form>
+            
             
         </div>
     </div>
+    <!-- <div class="accepted">
+        <div class="acceptedlogo">
+            <img src="images/tick.png">
+        </div>
+    </div> -->
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
