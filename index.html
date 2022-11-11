@@ -16,6 +16,7 @@
     <div class="header">
       <div class="navbar">
             <img src="images/logo.jpg">
+            
          <div class="country_select" id="country">
             <div class="select">
               
@@ -103,46 +104,43 @@
             </form>
         </div> -->
             
-        
+           <!-- <div class="box1"> -->
             <div class="box" onclick="yourdoctor(event)">
-                <div class="tooltip">
-                    <p>General Physician</p>
-                    <p>Medicine</p>
-                    <p>Dentists</p>
-                    <p>more...</p>
-                </div>
                 <a href="#"></a>
                 <i class="fa-sharp fa-solid fa-user-doctor"></i>
                 <h1 id="doctor">DOCTORS</h1>
                 
             </div>
+            <!-- <ul class="service_list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+           </div> -->
+
             <div class="box" onclick="yourrepair(event)">
-                <div class="tooltip-1">
-                    <p>General Physician</p>
-                    <p>Medicine</p>
-                    <p>Dentists</p>
-                    <p>more...</p>
-                </div>
+                
                 <a href="#"></a>
                 <i class="fa-sharp fa-solid fa-screwdriver-wrench"></i>
                 <h1 id="repair">REPAIRS</h1>
                 
             </div>
             
-            <div class="box">
+            <div class="box" onclick="yourservice(event)">
               
                 <a href="#"></a>
                 <i class="fa-sharp fa-solid fa-plug"></i>
                 <h1>SERVICES</h1>
                 
             </div>
-            <div class="box">
+            <div class="box" onclick="yoursaloon(event)">
                 <a href="#"></a>
                 <i class="fa-solid fa-scissors"></i>
                 <h1>SALOON</h1>
                 
             </div>
-            <div class="box">
+            <div class="box" onclick="yourgrocery(event)">
                 <a href="#"></a>
                 <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                 <h1>GROCERY</h1>
@@ -158,29 +156,30 @@
 
             </div>
             <br>
-            <form action="post" class="booking-form" onsubmit="submitform()" >
+            <form  class="booking-form" id="form"  >
                 <label for="Name">Name</label>
-                <input type="text"><br><br>
-                <label for="Phone Number" value="number ">Phone Number</label>
-                <input type="text"><br><br>
+                <input type="text" id="name"><br><br>
+                <label for="Phone Number" value="number " >Phone Number</label>
+                <input type="text" id="phone"><br><br>
                 <label for="Address">Address</label>
                 <input type="text" id="address"><br><br>
                 <label for="Date">Date</label>
-                <input type="date"><br><br>
+                <input type="date" id="date"><br><br>
                 <label for="Time">Time</label>
-                <input type="time"><br><br>
-                <button class="button">Submit</button>
+                <input type="time" id="time"><br><br>
+                
                 <div class="paraphrases">the expert will confirm and give you a call soon...</div>
             </form>
+            <button class="button" id="button" >Submit</button>
             
             
         </div>
     </div>
-    <!-- <div class="accepted">
+    <div class="accepted" id="tick">
         <div class="acceptedlogo">
             <img src="images/tick.png">
         </div>
-    </div> -->
+    </div>
 
     <script src="./script.js"></script>
 </body>
