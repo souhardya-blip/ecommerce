@@ -272,7 +272,8 @@ background-color: aliceblue;
     margin-top: 150px;
     border: 5px solid black;
     border-radius: 50px;
-    z-index:-1;
+    /* z-index:-1; */
+    background-color: rgb(15, 129, 161);
     cursor: pointer;
 
 }
@@ -293,44 +294,24 @@ background-color: aliceblue;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: 0.7s;
 }
-.tooltip{
-    border: 1px solid black;
-    width: 200px;
-    position: absolute;
-    margin-left: 500px;
-    margin-top: 200px;
-    padding: 10px;
-    color: black;
-    z-index:1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    cursor:pointer;
-    display: none;
-  
+
+
+
+
+.service_list{
+  position: relative;
+  padding: 20px;
+  padding-top:80px;
+  top: -70px;
+  left: 600px;
+  width: 800px;
+  border-radius:50px;
+  z-index:-1;
+  background-color: rgb(210, 210, 210);
+  display: none;
+}
+.box:hover + .service_list{
+display: block;
 
 }
-.box:hover > .tooltip{
-    display: block;
-}
-.tooltip-1{
-    border: 1px solid black;
-    width: 200px;
-    position: absolute;
-    margin-left: 550px;
-    margin-top: 200px;
-    padding: 10px;
-    color: black;
-    z-index:1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    cursor:pointer;
-    display: none;
-    
-  
-}
-.box:hover > .tooltip-1{
-    display: block;
-}
-/* .service_list{
-    position: relative;
-} */
+
