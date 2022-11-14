@@ -151,7 +151,7 @@ cursor: pointer;
     cursor: pointer;
 }
 .options:hover{
-background-color: aliceblue;
+background-color: rgb(143, 145, 146);
 }
 .options p{
     margin-left: 40px;
@@ -167,6 +167,7 @@ background-color: aliceblue;
     background-color: aliceblue;
     position: absolute;
 }
+
 .hidden{
     display:block;
 }
@@ -231,6 +232,7 @@ background-color: aliceblue;
 
 
 }
+
 .hid-logo{
     display: block;
 }
@@ -314,4 +316,31 @@ background-color: aliceblue;
 display: block;
 
 }
+.service_list  li{
+    list-style-type: none;;
+}
 
+.service_list  li p{
+    padding: 10px 10px 10px 10px;
+}
+.about{
+    text-decoration:none;
+    text-align:center;
+}
+.about p{
+   color:#535353;
+   font-size: 18px;
+   line-height: 30px;
+}
+.copyright{
+    color:rgb(16, 15, 15);
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: #a9a6a6;
+    font-size:18px;
+    margin-top:100px;
+    text-decoration:none;
+    text-align:center; 
+}
